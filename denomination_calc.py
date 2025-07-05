@@ -1,13 +1,13 @@
 from tkinter import *
 from tkinter import messagebox
-from tkinter import Image, ImageTk
+from PIL import Image, ImageTk
 
 root= Tk()
 root.title("Denomination Counter")
 root.configure(bg="green")
 root.geometry("650x400")
 
-upload = Image.open("forest.png")
+upload = Image.open("/Users/fatehhundal/Documents/lesson 45 denomination calculator/forest.png")
 upload = upload.resize((300, 300))
 image = ImageTk.PhotoImage(upload)
 label = Label(root, image=image, bg="light green")
@@ -17,10 +17,9 @@ label1.place(relx=0.5, y=340, anchor=CENTER)
 
 def msg():
     MsgBox = messagebox.showinfo("Alert", "Do you want to calculate the denomination count?")
-    if MsgBox == "ok":
-        topwin()
+    topwin()
 
-button1 = Button(root, text="Let's get started!", command=msg, bg="dark green", fg="white")
+button1 = Button(root, text="Let's get started!", command=msg)
 button1.place(x=260, y=360)
 
 def topwin():
@@ -62,7 +61,7 @@ def topwin():
         except ValueError:
             messagebox.showerror("Error", "Please enter a valid number")
         
-    btn = Button(top, text="Calculate", command=calculator, bg="dark green", fg="white")
+    btn = Button(top, text="Calculate", command=calculator)
 
     label.place(x=230, y=50   )
     entry.place(x=200, y=80   )
@@ -76,7 +75,5 @@ def topwin():
     t1.place(x=270, y=200   )
     t2.place(x=270, y=230   )
     t3.place(x=270, y=260   )
-
-    top.mainloop()
 
 root.mainloop()
