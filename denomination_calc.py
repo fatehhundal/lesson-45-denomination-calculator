@@ -7,7 +7,7 @@ root.title("Denomination Counter")
 root.configure(bg="green")
 root.geometry("650x400")
 
-upload = Image.open("/Users/fatehhundal/Documents/lesson 45 denomination calculator/forest.png")
+upload = Image.open("/Users/fatehhundal/Desktop/Coding Courses/lesson 45 denomination calculator/forest.png")
 upload = upload.resize((300, 300))
 image = ImageTk.PhotoImage(upload)
 label = Label(root, image=image, bg="light green")
